@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+       {% block title %}
+
+       {% endblock %}
+
+    </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-red bg-light">
+           <a class="navbar-brand" href="#">FloriWinks</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                  <span class="navbar-toggler-icon"></span>
+           </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+               <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item ">
+               <a class="nav-link" href="#">Cadastro</a>
+            </li>
+            <li class="nav-item ">
+               <a class="nav-link" href="#">Sobre nós</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+      {% block content %}
+         <div class="offset-1 col-10 list-div">
+            <h1>Lista de tarefas</h1>
+            <div class="col-2 add-div">
+               <i class="fas fa-plus"></i>Adicionar Tarefa
+
+            </div>
+            <div class="col-9 search-div">
+                <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome da tarefa a buscar">
+                <i class="fas fa-search"></i>
+            </div>
+
+
+         </div>
+      {% endblock %}
+
+      <footer>
+          <p>Floricultura das Winks</p>
+      </footer>
+
+    </div>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
