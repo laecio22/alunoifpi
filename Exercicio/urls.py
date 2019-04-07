@@ -20,4 +20,6 @@ from floricultura import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name ="inicio"),
+    path('cadastro/', views.cadastro, name ='realizar cadastro'),
+    path('lista/',views.lista, name = 'lista'),
 ]
